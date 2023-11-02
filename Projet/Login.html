@@ -1,74 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>Hacker Login</title>
-    <style>
-        /* Your existing CSS styles here */
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
 
-        /* Additional styles for the "Create Account" link */
-        .create-account {
-            color: #00f;
-            text-decoration: none;
-        }
-
-        /* Additional styles for the "Create Account" form, initially hidden */
-        .create-account-form {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-
-<div id="menu">
-    <a href="Marjane.html"><i class="fa fa-home"></i></a>
+    <div id="menu">
+    <a href="Marjane.html"><i class="fa fa-home"></i></a> 
     <a href="About.html">About</a>
     <a href="Services.html">Services</a>
     <a href="Login.html">Login</a>
     <a href="https://www.marjane.ma/contenu/foire-aux-questions" target="_blank">Contact</a>
-</div>
+    </div>
 
-<div class="container">
-    <form class="login-form" action="login.php" method="POST">
-        <h1>Hacker Login</h1>
+
+    <div class="center">
+      <h1>Login</h1>
+      <form method="post" action="login.php">
         <div class="txt_field">
-            <input type="email" name="Email" required>
-            <span></span>
-            <label>Email</label>
+          <input type="email" name="Email" required>
+          <span></span>
+          <label>Email</label>
         </div>
         <div class="txt_field">
-            <input type="password" name="Password" required>
-            <span></span>
-            <label>Password</label>
+          <input type="password" name="Password" required>
+          <span></span>
+          <label>Password</label>
         </div>
         <div class="pass">Forgot Password?</div>
         <input type="submit" value="Login">
-        <p>Don't have an account? <a class="create-account" href="javascript:void(0);" onclick="showCreateAccountForm()">Create Account</a></p>
-    </form>
-
-    <!-- Create Account Form (Initially Hidden) -->
-    <form class="create-account-form" action="create_account.php" method="POST">
-        <h1>Create Account</h1>
-        <div class="txt_field">
-            <input type="text" name="newUsername" placeholder="New Username">
-            <span></span>
-            <label>New Username</label>
+        <div class="signup_link">
+          Not a member? <a href="Signup.html">Signup</a>
         </div>
-        <div class="txt_field">
-            <input type="password" name="newPassword" placeholder="New Password">
-            <span></span>
-            <label>New Password</label>
-        </div>
-        <input type="submit" value="Create Account">
-    </form>
-</div>
+      </form>
+    </div>
 
-<script>
-    function showCreateAccountForm() {
-        document.querySelector('.login-form').style.display = 'none';
-        document.querySelector('.create-account-form').style.display = 'block';
-    }
-</script>
-
-</body>
+  </body>
 </html>
